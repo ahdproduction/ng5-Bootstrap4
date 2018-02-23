@@ -1,0 +1,24 @@
+{ 
+    "courses": { 
+        "angular-complete-guide": { 
+            "description": "Maître angulaire (angulaire 2+, incl. angulaire 5) et construit des applications web impressionnantes et réactives avec le successeur de Angular.js", 
+            "title ":" Angular - Le guide complet ", 
+            " url ":" https://codingthesmartway.com/courses/angular2-complete-guide/ " 
+        }, 
+        " learn-ionic3-from-scratch ": { 
+            " description ":" Créez des applications mobiles multi plates-formes avec Ionic 3, Angular 4, TypeScript et Firebase. ", 
+            " Title ":" Apprendre Ionic 3 From Scratch ", 
+            " url ":" https://codingthesmartway.com/courses/ionic3/ "
+        }, 
+        "modern-react-with-redux": {
+            "description": "Maîtrisez les fondamentaux de React et Redux avec ce tutoriel en développant des applications avec React Router, Webpack et ES6", 
+            "title": "Modern React avec Redux", 
+            "url": "https: // codingthesmartway .com / cours / moderne-reaction-with-redux / " 
+        }, 
+        " vuejs2-complete-guide ": { 
+            " description ":" Vue JS est un framework JavaScript génial pour la création d'applications Frontend! VueJS mélange le meilleur de Angular + React ! ", 
+            " title ":" Vue.js 2 - Le guide complet ", 
+            " url ":" https://codingthesmartway.com/courses/vuejs2-complete-guide " 
+        } 
+    }
+}
