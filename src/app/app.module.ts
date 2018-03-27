@@ -11,12 +11,14 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { CoursesListComponent } from './courses-list/courses-list.component';
+import { MarketViewComponent } from './market-view/market-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppNavbarComponent,
-    CoursesListComponent
+    CoursesListComponent,
+    MarketViewComponent
   ],
   imports: [
     BrowserModule,
