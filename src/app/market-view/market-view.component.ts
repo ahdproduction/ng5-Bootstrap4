@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Marketitem } from './market-item';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -8,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarketViewComponent implements OnInit {
 
+  marketItems: Marketitem[] = [];
+
   constructor() { }
 
   ngOnInit() {
+    for (let index = 0; index < 100; index++) {
+      this.marketItems.push(
+        new Marketitem(index, 'name', 'assets/img/ca.jpg', 100, false)
+      );
+      console.log('element #', this.marketItems[index].Id);
+    }
+
   }
 
 }
