@@ -16,6 +16,7 @@ import { environment } from '../environments/environment';
 import { CoursesListComponent } from './courses-list/courses-list.component';
 import { MarketViewComponent } from './market-view/market-view.component';
 import { MarketViewDetailComponent } from './market-view-detail/market-view-detail.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MarketViewDetailComponent } from './market-view-detail/market-view-deta
     AngularFireAuthModule,
     NgbModule.forRoot(),
     HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]
