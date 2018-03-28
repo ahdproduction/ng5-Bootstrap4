@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 // import { HttpClient } from '@angular/common/http'; 
 import { HttpClientModule } from '@angular/common/http';
@@ -17,6 +18,7 @@ import { CoursesListComponent } from './courses-list/courses-list.component';
 import { MarketViewComponent } from './market-view/market-view.component';
 import { MarketViewDetailComponent } from './market-view-detail/market-view-detail.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,15 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AppNavbarComponent,
     CoursesListComponent,
     MarketViewComponent,
-    MarketViewDetailComponent
+    MarketViewDetailComponent,
+    FilterPipe
   ],
   entryComponents: [
     MarketViewDetailComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
@@ -38,7 +42,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     HttpClientModule,
     NgxPaginationModule
   ],
-  providers: [MovieService],
+  providers: [MovieService, FilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

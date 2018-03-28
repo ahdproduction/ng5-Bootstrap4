@@ -1,6 +1,8 @@
+<input [(ngModel)]="searchText" class="form-control d-flex align-items-center" type="Filter" placeholder="Search" aria-label="Filter">
+
 <div class="container">  
 	<div class="grid-container">
-		<div class="animated slideInUp" *ngFor="let item of (marketItems | paginate: { itemsPerPage:12, currentPage: p} ) ; let i = index">
+		<div class="animated slideInUp" *ngFor="let item of (marketItems | paginate: { itemsPerPage:12, currentPage: p} ) | filter : searchText ; let i = index">
 			<div class="grid-item">
 				<div class="card">
 					<img class="card-img-top" src="../../assets/img/ca.jpg" alt="Card image cap">
