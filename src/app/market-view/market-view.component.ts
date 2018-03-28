@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Marketitem } from './market-item';
+import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { MarketViewDetailComponent} from '../market-view-detail/market-view-detail.component';
 
 @Component({
 	// tslint:disable-next-line:component-selector
@@ -11,7 +13,7 @@ export class MarketViewComponent implements OnInit {
 
 	marketItems: Marketitem[] = [];
 
-	constructor() { }
+	constructor(private modalService: NgbModal) { }
 
 	ngOnInit() {
 		for (let index = 0; index < 100; index++) {
@@ -23,6 +25,7 @@ export class MarketViewComponent implements OnInit {
 	}
 
 	open(item: Marketitem): void {
-		window.alert(item.Id);
+		const modalRef = this.modalService.open(MarketViewDetailComponent);
+		modalRef.componentInstance.marketitem = item;
 	}
 }
