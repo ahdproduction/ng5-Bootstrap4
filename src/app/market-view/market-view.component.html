@@ -3,18 +3,39 @@
 		<div class="animated slideInUp" *ngFor="let item of marketItems; let i = index">
 			<div class="grid-item">
 				<div class="card">
-					<img class="card-img-top" src="{{item.img}}" alt="Card image cap">
+					<img class="card-img-top" src="../../assets/img/ca.jpg" alt="Card image cap">
 					<!-- <div class="card-img-overlay"> -->
 						<div class="card-body">
-							<small class="text-muted">{{item.Id}} - {{item.name}}</small>
+							<small class="text-muted">{{item.title}}</small>
 						</div>
 					<!-- </div> -->
 					<div class="card-footer">
 						<!-- <a href="#" class="btn btn-warning" (click)="open(item)">Go somewhere</a> -->
-						<button class="btn btn-warning" (click)="open(item)">Show</button>
+						<button class="btn btn-warning" (click)="open(item)">Details</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<!-- 
+<div class="container">  
+	<div class="grid-container">
+		<div class="animated slideInUp" *ngFor="let item of marketItems; let i = index">
+			<div class="grid-item">
+				<div class="card">
+					<img class="card-img-top" src="{{item.img}}" alt="Card image cap">
+
+						<div class="card-body">
+							<small class="text-muted">{{item.Id}} - {{item.name}}</small>
+						</div>
+
+					<div class="card-footer">
+
+						<button class="btn btn-warning" (click)="open(item)">Details</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->

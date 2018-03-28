@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Marketitem } from './market-item';
 import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { MarketViewDetailComponent} from '../market-view-detail/market-view-detail.component';
+import { MovieService } from '../movie.service';
 
 @Component({
 	// tslint:disable-next-line:component-selector
@@ -13,15 +14,21 @@ export class MarketViewComponent implements OnInit {
 
 	marketItems: Marketitem[] = [];
 
-	constructor(private modalService: NgbModal) { }
+	constructor(private modalService: NgbModal, private movieService: MovieService) { }
 
 	ngOnInit() {
-		for (let index = 0; index < 100; index++) {
-			this.marketItems.push(
-				new Marketitem(index, 'name', 'assets/img/ca.jpg', 100, false)
-			);
-			// console.log('element #', this.marketItems[index].Id);
-		}
+		this.movieService.getJSON().subscribe(data => {
+			this.marketItems = data;
+			// console.log(data);
+			console.log('getJson methode =>    ', this.marketItems);	
+		});
+
+		// for (let index = 0; index < 100; index++) {
+		// 	this.marketItems.push(
+		// 		new Marketitem(index, 'name', 'assets/img/ca.jpg', 100, false)
+		// 	);
+		// 	// console.log('element #', this.marketItems[index].Id);
+		// }
 	}
 
 	open(item: Marketitem): void {

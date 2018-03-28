@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+// import { HttpClient } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import { MovieService } from './movie.service';
 
 import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
@@ -30,9 +33,10 @@ import { MarketViewDetailComponent } from './market-view-detail/market-view-deta
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
